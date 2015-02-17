@@ -1,0 +1,9 @@
+shell script:
+$ curl 'https://www.eeb.ucla.edu/seminars.php?id=[0,800]' -o "seminar_#1.html"
+
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(open("seminary[0,800].html"))
+#find instances of "EcoEvoPub Series" in "id=section" tag
+#capture first line of 4th <p><\p>
+#output to textfile, line by line
